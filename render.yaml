@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: aikagra-portfolio
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
