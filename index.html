@@ -3,120 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aikagra Gupta — Portfolio | AI Security, Cybersecurity & Machine Learning</title>
-    <meta name="description" content="Portfolio of Aikagra Gupta — AI Security Researcher, Cybersecurity Engineer & Full-Stack Developer specializing in LLM evaluation, threat intelligence, and IDS platforms.">
+    <title>Aikagra Gupta — AI Security, Cybersecurity & Machine Learning Engineer</title>
+    <meta name="description" content="Portfolio of Aikagra Gupta — AI Security Researcher, Cybersecurity Engineer & ML Specialist specializing in LLM red-teaming, threat intelligence, and secure systems.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Aikagra Gupta — AI Security & Cybersecurity Engineer">
+    <meta property="og:description" content="Published Researcher & Systems Engineer building LLM guardrails, dual-head SecBERT classifiers, and agentic SOC platforms.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aikagra-gupta.vercel.app">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
+    <!-- Background Canvas & Ambient Light -->
+    <canvas id="ambient-canvas"></canvas>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">
-                <span class="logo-accent">&lt;</span>AikagraGupta<span class="logo-accent">/&gt;</span>
+                <span class="logo-bracket">&lt;</span><span class="logo-name">AikagraGupta</span><span class="logo-bracket">/&gt;</span>
             </a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#domains">Domains</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact" class="btn-primary-nav">Contact</a></li>
+            
+            <div class="nav-menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#domains" class="nav-link">Domains</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="btn-nav">Get in Touch</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-container">
-            <div class="hero-badge">
-                <span class="pulse-dot"></span> Available for AI Security & Engineering Opportunities
+    <header class="hero" id="about">
+        <div class="container hero-content">
+            <div class="badge-pill">
+                <span class="status-indicator"></span>
+                <span class="badge-text">Available for AI Security & Research Engineering</span>
             </div>
+
             <h1 class="hero-title">
-                Building Secure AI Systems & <br>
-                <span class="gradient-text">Cybersecurity Engineering</span>
+                Architecting <span class="gradient-text">Secure AI</span> & <br>
+                Next-Gen <span class="gradient-text-alt">Cyber Defense</span>
             </h1>
-            <p class="hero-subtitle">
-                AI Security Researcher & Systems Engineer specializing in LLM red-teaming, automated threat intelligence, intrusion detection systems, and full-stack biomedical & safety platforms.
+
+            <div class="hero-typewriter-container">
+                <span class="typewriter-prefix">Specializing in: </span>
+                <span class="typewriter-text" id="typewriter"></span>
+                <span class="typewriter-cursor">|</span>
+            </div>
+
+            <p class="hero-description">
+                AI Security Researcher & Systems Engineer building production-grade LLM evaluation frameworks, dual-head SecBERT vulnerability classifiers, and multi-agent SOC defense platforms.
             </p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">Explore Projects</a>
-                <a href="https://github.com/Aikagra-rgb" target="_blank" rel="noopener" class="btn btn-secondary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                    GitHub Profile
+
+            <div class="hero-cta-group">
+                <a href="#projects" class="btn btn-glow">
+                    <span>Explore Featured Projects</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="https://github.com/Aikagra-rgb" target="_blank" rel="noopener" class="btn btn-glass">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub @Aikagra-rgb</span>
                 </a>
             </div>
 
-            <!-- Stats Bar -->
-            <div class="hero-stats">
-                <div class="stat-card">
-                    <span class="stat-number">4+</span>
-                    <span class="stat-label">Core Technical Domains</span>
+            <!-- Metric Cards Bento Grid -->
+            <div class="metrics-container">
+                <div class="metric-card">
+                    <div class="metric-val">1</div>
+                    <div class="metric-sub">Published Research Paper (IRJET)</div>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Open-Source Repositories</span>
+                <div class="metric-card">
+                    <div class="metric-val">4+</div>
+                    <div class="metric-sub">Core Technical Domains</div>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-number">7+</span>
-                    <span class="stat-label">ML & Security Frameworks</span>
+                <div class="metric-card">
+                    <div class="metric-val">10+</div>
+                    <div class="metric-sub">Open-Source Security & AI Repos</div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Domains Section -->
+    <!-- Research Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <div class="section-badge">Peer-Reviewed Research</div>
+                <h2 class="section-title">Scientific Publications</h2>
+                <p class="section-desc">Groundbreaking research advancing automated vulnerability classification and generative threat intelligence.</p>
+            </div>
+
+            <div class="pub-featured-card">
+                <div class="pub-card-glow"></div>
+                <div class="pub-card-inner">
+                    <div class="pub-header">
+                        <span class="pub-journal-tag">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                            IRJET • Volume 13, Issue 10 • Oct 2026
+                        </span>
+                        <span class="pub-status-badge">Peer-Reviewed & Published</span>
+                    </div>
+
+                    <h3 class="pub-title">
+                        CyberGuard AI: A Multi-Task Dual-Head SecBERT Architecture for Automated CVE Severity Triage and Threat Intelligence Generation
+                    </h3>
+
+                    <p class="pub-author">
+                        <strong>Aikagra Gupta</strong> — <em>International Research Journal of Engineering and Technology (IRJET)</em>
+                    </p>
+
+                    <p class="pub-abstract">
+                        Proposes a hybrid deep learning framework combining a custom multi-task dual-head SecBERT/DistilBERT model for multi-class CVSS severity scoring alongside a local Mistral 7B LLM agent for automated threat playbook synthesis and MITRE ATT&CK mitigation workflows.
+                    </p>
+
+                    <div class="pub-actions">
+                        <a href="https://www.irjet.net/archives/V13/i10/IRJET-V13I1005.pdf" target="_blank" rel="noopener" class="btn btn-primary-sm">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            Read Paper (PDF)
+                        </a>
+                        <a href="https://cve-severity-classifier-2sbnqjlnckufq9x5aufdtv.streamlit.app/" target="_blank" rel="noopener" class="btn btn-glow-sm">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            Launch Live Platform
+                        </a>
+                        <a href="https://github.com/Aikagra-rgb/cve-severity-classifier" target="_blank" rel="noopener" class="btn btn-glass-sm">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Technical Domains Section -->
     <section id="domains" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Core Expertise</span>
-                <h2>Specialized Technical Domains</h2>
-                <p>Bridging the gap between artificial intelligence, threat analysis, and robust software architecture.</p>
+            <div class="section-title-wrap">
+                <div class="section-badge">Engineering Focus</div>
+                <h2 class="section-title">Core Technical Domains</h2>
+                <p class="section-desc">Multi-disciplinary technical depth bridging cutting-edge AI, offensive security, and system architecture.</p>
             </div>
-            
-            <div class="domains-grid">
-                <div class="domain-card">
-                    <div class="domain-icon">🛡️</div>
+
+            <div class="domains-bento">
+                <div class="bento-card bento-glow-indigo">
+                    <div class="bento-icon">🛡️</div>
                     <h3>AI & LLM Security</h3>
-                    <p>Red-teaming language models, prompt injection fuzzing, hallucination rate scoring, and baseline regression testing for production guardrails.</p>
-                    <div class="domain-tech">
+                    <p>Red-teaming generative AI systems, heuristic & LLM-as-judge scoring, prompt injection fuzzing with 7 mutation strategies, and CI/CD baseline regression gates.</p>
+                    <div class="bento-tags">
                         <span>guardrail-eval</span>
-                        <span>FastAPI</span>
                         <span>Prompt Fuzzing</span>
+                        <span>Hallucination Scoring</span>
+                        <span>CI Gatekeeper</span>
                     </div>
                 </div>
 
-                <div class="domain-card">
-                    <div class="domain-icon">🔍</div>
-                    <h3>Cybersecurity & Threat Intel</h3>
-                    <p>Automated CVE severity classification using fine-tuned DistilBERT + Mistral 7B, MITRE ATT&CK RAG retrieval, and network packet analysis.</p>
-                    <div class="domain-tech">
-                        <span>DistilBERT</span>
+                <div class="bento-card bento-glow-violet">
+                    <div class="bento-icon">🔍</div>
+                    <h3>Threat Intelligence & NLP</h3>
+                    <p>Automated CVE vulnerability triage using fine-tuned SecBERT/DistilBERT classifiers and generative LLM playbooks mapping threats to the MITRE ATT&CK enterprise matrix.</p>
+                    <div class="bento-tags">
+                        <span>SecBERT</span>
                         <span>Mistral 7B</span>
+                        <span>CVSS Triage</span>
                         <span>MITRE ATT&CK</span>
                     </div>
                 </div>
 
-                <div class="domain-card">
-                    <div class="domain-icon">⚡</div>
-                    <h3>Intrusion Detection & Defense</h3>
-                    <p>Hybrid IDS/IPS engines combining signature rule matching, Isolation Forest anomaly detection, and live packet sniffing telemetry.</p>
-                    <div class="domain-tech">
-                        <span>PyShark / Scapy</span>
+                <div class="bento-card bento-glow-emerald">
+                    <div class="bento-icon">⚡</div>
+                    <h3>Network Defense & IDS/IPS</h3>
+                    <p>Hybrid intrusion detection platforms combining signature matching, scikit-learn Isolation Forest ML models, live packet sniffing, and active kernel-level gatekeeping.</p>
+                    <div class="bento-tags">
+                        <span>Hybrid IDS</span>
+                        <span>Scapy Sniffer</span>
                         <span>Isolation Forest</span>
-                        <span>IPS Gatekeeping</span>
+                        <span>IPS Rules</span>
                     </div>
                 </div>
 
-                <div class="domain-card">
-                    <div class="domain-icon">🧬</div>
-                    <h3>Full-Stack & Applied AI</h3>
-                    <p>Healthspan research copilot platforms, biological age clock algorithms (Levine PhenoAge), and geo-fenced safety monitoring tools.</p>
-                    <div class="domain-tech">
+                <div class="bento-card bento-glow-cyan">
+                    <div class="bento-icon">🧬</div>
+                    <h3>Applied AI & Full-Stack Systems</h3>
+                    <p>Production RAG architectures with 3072-dimensional vector embeddings, Google Gemini 3.6-flash streaming, Levine PhenoAge algorithms, and blockchain audit ledgers.</p>
+                    <div class="bento-tags">
                         <span>Gemini 3.6-flash</span>
-                        <span>3072-dim Vector RAG</span>
+                        <span>3072-dim RAG</span>
+                        <span>FastAPI</span>
                         <span>Docker</span>
                     </div>
                 </div>
@@ -124,200 +212,247 @@
         </div>
     </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="section bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Research & Academia</span>
-                <h2>Publications</h2>
-                <p>Peer-reviewed research articles and scientific publications.</p>
-            </div>
-
-            <div class="publication-card" style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 2rem; border-radius: 16px;">
-                <div class="pub-badge" style="display: inline-block; padding: 0.3rem 0.8rem; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 9999px; font-size: 0.8rem; font-family: var(--font-mono); color: #a5b4fc; margin-bottom: 1rem;">
-                    📄 IRJET Vol. 13, Issue 10 • Oct 2026
-                </div>
-                <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-primary); line-height: 1.3;">
-                    CyberGuard AI: A Multi-Task Dual-Head SecBERT Architecture for Automated CVE Severity Triage and Threat Intelligence Generation
-                </h3>
-                <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
-                    <strong>Aikagra Gupta</strong> — Published in <em>International Research Journal of Engineering and Technology (IRJET)</em>, Vol. 13, Issue 10, Oct 2026.
-                </p>
-                <div class="pub-links" style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-                    <a href="https://www.irjet.net/archives/V13/i10/IRJET-V13I1005.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.5rem 1rem;">
-                        📄 Read Paper (PDF)
-                    </a>
-                    <a href="https://github.com/Aikagra-rgb/cve-severity-classifier" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.5rem 1rem;">
-                        💻 Code Repository
-                    </a>
-                    <a href="https://cve-severity-classifier-2sbnqjlnckufq9x5aufdtv.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.875rem; padding: 0.5rem 1rem;">
-                        🌐 Live Platform
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section with Filter Tabs -->
+    <!-- Projects Showcase Section -->
     <section id="projects" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Portfolio</span>
-                <h2>Featured Projects</h2>
-                <p>Explore engineering projects across AI security, cybersecurity, and full-stack systems.</p>
+            <div class="section-title-wrap">
+                <div class="section-badge">Portfolio</div>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-desc">Production-grade systems, published research implementations, and machine learning pipelines.</p>
             </div>
 
-            <!-- Filter Tabs -->
-            <div class="filter-tabs">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="ai-security">AI Security</button>
-                <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
-                <button class="filter-btn" data-filter="fullstack">Full-Stack & Applied AI</button>
-                <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+            <!-- Filter Navigation Tabs -->
+            <div class="filter-wrapper">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Projects (7)</button>
+                    <button class="filter-tab" data-filter="ai-security">AI Security</button>
+                    <button class="filter-tab" data-filter="cybersecurity">Cybersecurity & Research</button>
+                    <button class="filter-tab" data-filter="applied-ai">Applied AI & Systems</button>
+                    <button class="filter-tab" data-filter="machine-learning">Machine Learning</button>
+                </div>
             </div>
 
             <!-- Projects Grid -->
-            <div class="projects-grid">
-                <!-- guardrail-eval -->
-                <article class="project-card" data-category="ai-security">
-                    <div class="project-header">
-                        <div class="project-type">AI Security / LLM Evaluation</div>
-                        <a href="https://github.com/Aikagra-rgb/guardrail-eval" target="_blank" rel="noopener" class="project-link-icon" title="View Source">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
-                    </div>
-                    <h3>guardrail-eval</h3>
-                    <p>LLM red-teaming & guardrail evaluation framework for adversarial testing, prompt injection fuzzing, hallucination scoring, and CI gate regression checks.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>Typer CLI</span>
-                        <span>Prompt Fuzzing</span>
-                        <span>JUnit XML</span>
-                    </div>
-                </article>
+            <div class="projects-grid" id="projects-grid">
 
-                <!-- longevity-lens -->
-                <article class="project-card" data-category="fullstack">
-                    <div class="project-header">
-                        <div class="project-type">Full-Stack / Applied AI</div>
-                        <a href="https://github.com/Aikagra-rgb/longevity-lens" target="_blank" rel="noopener" class="project-link-icon" title="View Source">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
-                    </div>
-                    <h3>longevity-lens</h3>
-                    <p>Healthspan analytics & research copilot combining Google Gemini 3.6-flash, 3072-dim semantic vector RAG search, Levine PhenoAge, and biological age clocks.</p>
-                    <div class="project-tags">
-                        <span>Python 3.11</span>
-                        <span>FastAPI</span>
-                        <span>Gemini 3.6-flash</span>
-                        <span>3072-dim RAG</span>
-                        <span>Docker</span>
-                    </div>
-                </article>
-
-                <!-- cve-severity-classifier -->
-                <article class="project-card" data-category="cybersecurity">
-                    <div class="project-header">
-                        <div class="project-type">Cybersecurity / NLP • Published Paper</div>
-                        <div style="display: flex; gap: 0.5rem; align-items: center;">
-                            <a href="https://www.irjet.net/archives/V13/i10/IRJET-V13I1005.pdf" target="_blank" rel="noopener" class="project-link-icon" title="Read Paper (PDF)">
-                                📄
-                            </a>
-                            <a href="https://cve-severity-classifier-2sbnqjlnckufq9x5aufdtv.streamlit.app/" target="_blank" rel="noopener" class="project-link-icon" title="Live Streamlit App">
-                                🌐
-                            </a>
-                            <a href="https://github.com/Aikagra-rgb/cve-severity-classifier" target="_blank" rel="noopener" class="project-link-icon" title="View Source">
+                <!-- 1. guardrail-eval -->
+                <div class="project-card" data-category="ai-security">
+                    <div class="card-glass-glow"></div>
+                    <div class="card-inner">
+                        <div class="card-header">
+                            <span class="card-category tag-indigo">AI Security • LLM Evaluation</span>
+                            <a href="https://github.com/Aikagra-rgb/guardrail-eval" target="_blank" rel="noopener" class="icon-link" title="GitHub Repository">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                             </a>
                         </div>
+                        <h3 class="card-title">guardrail-eval</h3>
+                        <p class="card-text">
+                            Production LLM red-teaming and guardrail evaluation framework featuring 7 adversarial mutation strategies, hallucination rate scoring, baseline regression diffing, and interactive HTML dashboards.
+                        </p>
+                        <div class="tech-stack-list">
+                            <span>Python 3.10+</span>
+                            <span>FastAPI</span>
+                            <span>Typer CLI</span>
+                            <span>Prompt Fuzzing</span>
+                            <span>JUnit XML</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/Aikagra-rgb/guardrail-eval" target="_blank" rel="noopener" class="card-btn">
+                                <span>View on GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <h3>cve-severity-classifier (CyberGuard AI)</h3>
-                    <p><strong>Published Research (IRJET Oct 2026):</strong> Dual-head SecBERT/DistilBERT architecture for automated CVSS vulnerability triage combined with a local Mistral 7B LLM agent for threat mitigation playbook synthesis.</p>
-                    <div class="project-tags">
-                        <span>IRJET Oct 2026</span>
-                        <span>PyTorch</span>
-                        <span>SecBERT / DistilBERT</span>
-                        <span>Mistral 7B</span>
-                        <span>Streamlit Live</span>
-                    </div>
-                </article>
+                </div>
 
-                <!-- SHIELD-tourist-safety-system -->
-                <article class="project-card" data-category="fullstack">
-                    <div class="project-header">
-                        <div class="project-type">Full-Stack / Smart Systems</div>
-                        <a href="https://github.com/Aikagra-rgb/SHIELD-tourist-safety-system" target="_blank" rel="noopener" class="project-link-icon" title="View Source">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
+                <!-- 2. cve-severity-classifier -->
+                <div class="project-card" data-category="cybersecurity">
+                    <div class="card-glass-glow"></div>
+                    <div class="card-inner">
+                        <div class="card-header">
+                            <span class="card-category tag-emerald">Published Research • IRJET 2026</span>
+                            <div class="header-action-group">
+                                <a href="https://cve-severity-classifier-2sbnqjlnckufq9x5aufdtv.streamlit.app/" target="_blank" rel="noopener" class="icon-link-accent" title="Live Streamlit App">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                </a>
+                                <a href="https://github.com/Aikagra-rgb/cve-severity-classifier" target="_blank" rel="noopener" class="icon-link" title="GitHub Repository">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="card-title">cve-severity-classifier (CyberGuard AI)</h3>
+                        <p class="card-text">
+                            <strong>Published Paper:</strong> Multi-task dual-head SecBERT/DistilBERT deep learning classifier for automated CVE severity triage combined with a local Mistral 7B LLM agent for threat mitigation playbook generation.
+                        </p>
+                        <div class="tech-stack-list">
+                            <span>PyTorch</span>
+                            <span>SecBERT</span>
+                            <span>Mistral 7B</span>
+                            <span>Transformers</span>
+                            <span>Streamlit</span>
+                        </div>
+                        <div class="card-footer dual-action">
+                            <a href="https://cve-severity-classifier-2sbnqjlnckufq9x5aufdtv.streamlit.app/" target="_blank" rel="noopener" class="card-btn-accent">
+                                <span>Live Demo</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </a>
+                            <a href="https://github.com/Aikagra-rgb/cve-severity-classifier" target="_blank" rel="noopener" class="card-btn">
+                                <span>GitHub</span>
+                            </a>
+                        </div>
                     </div>
-                    <h3>SHIELD Tourist Safety System</h3>
-                    <p>Digital safety monitoring platform integrating Isolation Forest ML anomaly detection, SHA-256 cryptographic blockchain audit ledger, and geo-fencing.</p>
-                    <div class="project-tags">
-                        <span>FastAPI</span>
-                        <span>Isolation Forest</span>
-                        <span>SHA-256 Ledger</span>
-                        <span>Geo-Fencing</span>
-                        <span>Docker</span>
-                    </div>
-                </article>
+                </div>
 
-                <!-- Cerberus -->
-                <article class="project-card" data-category="cybersecurity">
-                    <div class="project-header">
-                        <div class="project-type">Cybersecurity / Multi-Agent</div>
-                        <a href="https://github.com/Aikagra-rgb/Cerberus" target="_blank" rel="noopener" class="project-link-icon" title="View Source">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
+                <!-- 3. longevity-lens -->
+                <div class="project-card" data-category="applied-ai">
+                    <div class="card-glass-glow"></div>
+                    <div class="card-inner">
+                        <div class="card-header">
+                            <span class="card-category tag-cyan">Full-Stack AI • Healthtech</span>
+                            <a href="https://github.com/Aikagra-rgb/longevity-lens" target="_blank" rel="noopener" class="icon-link" title="GitHub Repository">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
+                        <h3 class="card-title">longevity-lens</h3>
+                        <p class="card-text">
+                            Longevity research copilot combining Google Gemini 3.6-flash with a 3072-dimensional semantic vector RAG search over medical literature, Levine PhenoAge biological age scoring, and epigenetic clock modeling.
+                        </p>
+                        <div class="tech-stack-list">
+                            <span>Python 3.11</span>
+                            <span>FastAPI</span>
+                            <span>Gemini 3.6-flash</span>
+                            <span>3072-dim Vector RAG</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/Aikagra-rgb/longevity-lens" target="_blank" rel="noopener" class="card-btn">
+                                <span>View on GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <h3>Cerberus SOC Platform</h3>
-                    <p>Agentic SOC platform merging multi-model ML, MITRE ATT&CK RAG retrieval (700+ techniques), active IPS gatekeeping, and Three.js 3D WebGL command console.</p>
-                    <div class="project-tags">
-                        <span>FastAPI</span>
-                        <span>NVIDIA NIM</span>
-                        <span>DeepSeek</span>
-                        <span>MITRE ATT&CK</span>
-                        <span>Three.js</span>
-                    </div>
-                </article>
+                </div>
 
-                <!-- Orion-Hybrid-IDS -->
-                <article class="project-card" data-category="cybersecurity">
-                    <div class="project-header">
-                        <div class="project-type">Cybersecurity / Network Defense</div>
-                        <a href="https://github.com/Aikagra-rgb/Orion-Hybrid-IDS" target="_blank" rel="noopener" class="project-link-icon" title="View Source">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
+                <!-- 4. Cerberus -->
+                <div class="project-card" data-category="cybersecurity">
+                    <div class="card-glass-glow"></div>
+                    <div class="card-inner">
+                        <div class="card-header">
+                            <span class="card-category tag-violet">DevSecOps • Multi-Agent SOC</span>
+                            <a href="https://github.com/Aikagra-rgb/Cerberus" target="_blank" rel="noopener" class="icon-link" title="GitHub Repository">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
+                        <h3 class="card-title">Cerberus SOC Platform</h3>
+                        <p class="card-text">
+                            Agentic SOC platform merging multi-model ML, autonomous NVIDIA NIM agents (DeepSeek + Nemotron), TF-IDF RAG over 700+ MITRE ATT&CK enterprise techniques, active IPS defense, and a Three.js 3D WebGL command interface.
+                        </p>
+                        <div class="tech-stack-list">
+                            <span>FastAPI</span>
+                            <span>NVIDIA NIM</span>
+                            <span>DeepSeek</span>
+                            <span>MITRE ATT&CK</span>
+                            <span>Three.js 3D</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/Aikagra-rgb/Cerberus" target="_blank" rel="noopener" class="card-btn">
+                                <span>View on GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <h3>Orion Hybrid IDS</h3>
-                    <p>Hybrid network intrusion detection system combining static signature rule matching with machine learning anomaly detection and built-in attack simulation.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>Anomaly Detection</span>
-                        <span>Attack Simulator</span>
-                        <span>Docker</span>
-                    </div>
-                </article>
+                </div>
 
-                <!-- Customer-Churn-Prediction -->
-                <article class="project-card" data-category="machine-learning">
-                    <div class="project-header">
-                        <div class="project-type">Machine Learning</div>
-                        <a href="https://github.com/Aikagra-rgb/Customer-Churn-Prediction" target="_blank" rel="noopener" class="project-link-icon" title="View Source">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
+                <!-- 5. SHIELD-tourist-safety-system -->
+                <div class="project-card" data-category="applied-ai">
+                    <div class="card-glass-glow"></div>
+                    <div class="card-inner">
+                        <div class="card-header">
+                            <span class="card-category tag-cyan">Smart Systems • Blockchain</span>
+                            <a href="https://github.com/Aikagra-rgb/SHIELD-tourist-safety-system" target="_blank" rel="noopener" class="icon-link" title="GitHub Repository">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
+                        <h3 class="card-title">SHIELD Tourist Safety System</h3>
+                        <p class="card-text">
+                            Safety monitoring and incident response architecture integrating Isolation Forest anomaly detection for telemetry streams, cryptographic SHA-256 blockchain audit logging, and virtual geo-fencing barriers.
+                        </p>
+                        <div class="tech-stack-list">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>Isolation Forest</span>
+                            <span>SHA-256 Ledger</span>
+                            <span>Geo-Fencing</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/Aikagra-rgb/SHIELD-tourist-safety-system" target="_blank" rel="noopener" class="card-btn">
+                                <span>View on GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <h3>Customer Churn Prediction</h3>
-                    <p>End-to-end telecom churn prediction pipeline featuring SMOTE imbalanced data handling, model comparison (Random Forest, XGBoost), and SHAP explainability.</p>
-                    <div class="project-tags">
-                        <span>scikit-learn</span>
-                        <span>SMOTE</span>
-                        <span>XGBoost</span>
-                        <span>SHAP</span>
-                        <span>Streamlit</span>
+                </div>
+
+                <!-- 6. Orion-Hybrid-IDS -->
+                <div class="project-card" data-category="cybersecurity">
+                    <div class="card-glass-glow"></div>
+                    <div class="card-inner">
+                        <div class="card-header">
+                            <span class="card-category tag-emerald">Network Defense • Hybrid IDS</span>
+                            <a href="https://github.com/Aikagra-rgb/Orion-Hybrid-IDS" target="_blank" rel="noopener" class="icon-link" title="GitHub Repository">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
+                        <h3 class="card-title">Orion Hybrid IDS</h3>
+                        <p class="card-text">
+                            Network intrusion detection platform combining signature-based rule inspection with machine learning anomaly detection models, Docker Compose orchestration, and automated attack simulation scripts.
+                        </p>
+                        <div class="tech-stack-list">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>Anomaly Detection</span>
+                            <span>Attack Simulator</span>
+                            <span>Docker Compose</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/Aikagra-rgb/Orion-Hybrid-IDS" target="_blank" rel="noopener" class="card-btn">
+                                <span>View on GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
                     </div>
-                </article>
+                </div>
+
+                <!-- 7. Customer-Churn-Prediction -->
+                <div class="project-card" data-category="machine-learning">
+                    <div class="card-glass-glow"></div>
+                    <div class="card-inner">
+                        <div class="card-header">
+                            <span class="card-category tag-amber">Machine Learning • Explainable AI</span>
+                            <a href="https://github.com/Aikagra-rgb/Customer-Churn-Prediction" target="_blank" rel="noopener" class="icon-link" title="GitHub Repository">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
+                        <h3 class="card-title">Customer Churn Prediction</h3>
+                        <p class="card-text">
+                            End-to-end telecom customer churn pipeline implementing SMOTE imbalanced data handling, cross-validated model benchmarking (XGBoost, Random Forest), and SHAP feature importance explainability.
+                        </p>
+                        <div class="tech-stack-list">
+                            <span>scikit-learn</span>
+                            <span>SMOTE</span>
+                            <span>XGBoost</span>
+                            <span>SHAP Explainability</span>
+                            <span>Streamlit</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/Aikagra-rgb/Customer-Churn-Prediction" target="_blank" rel="noopener" class="card-btn">
+                                <span>View on GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -325,79 +460,96 @@
     <!-- Technical Skills Section -->
     <section id="skills" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Capabilities</span>
-                <h2>Skills & Technical Stack</h2>
-                <p>Comprehensive overview of tools, frameworks, and technologies.</p>
+            <div class="section-title-wrap">
+                <div class="section-badge">Capabilities</div>
+                <h2 class="section-title">Technical Arsenal</h2>
+                <p class="section-desc">Languages, libraries, and frameworks utilized across production engineering & research.</p>
             </div>
 
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>AI & LLM Security</h4>
-                    <ul>
-                        <li>LLM Red-Teaming</li>
-                        <li>Prompt Injection Fuzzing</li>
-                        <li>Hallucination Rate Scoring</li>
-                        <li>Guardrail Regression Gates</li>
-                        <li>3072-dim Semantic Vector RAG</li>
-                        <li>Google Gemini API</li>
-                    </ul>
+            <div class="skills-bento">
+                <div class="skill-category-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">🛡️</span>
+                        <h4>AI Security & Evaluation</h4>
+                    </div>
+                    <div class="chip-container">
+                        <span class="skill-chip">LLM Red-Teaming</span>
+                        <span class="skill-chip">Prompt Injection Fuzzing</span>
+                        <span class="skill-chip">Hallucination Scoring</span>
+                        <span class="skill-chip">CI/CD Regression Gates</span>
+                        <span class="skill-chip">Semantic RAG</span>
+                        <span class="skill-chip">Gemini 3.6-flash API</span>
+                    </div>
                 </div>
 
-                <div class="skill-category">
-                    <h4>Cybersecurity & Defense</h4>
-                    <ul>
-                        <li>MITRE ATT&CK Matrix</li>
-                        <li>Network Packet Sniffing (Scapy/PCAP)</li>
-                        <li>Signature & Anomaly IDS/IPS</li>
-                        <li>CVE Vulnerability Analysis</li>
-                        <li>Threat Mitigation Playbooks</li>
-                        <li>SHA-256 Blockchain Audit Ledgers</li>
-                    </ul>
+                <div class="skill-category-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">🔍</span>
+                        <h4>Cybersecurity & Defense</h4>
+                    </div>
+                    <div class="chip-container">
+                        <span class="skill-chip">MITRE ATT&CK Matrix</span>
+                        <span class="skill-chip">Packet Sniffing (Scapy)</span>
+                        <span class="skill-chip">Signature & Anomaly IDS</span>
+                        <span class="skill-chip">Active IPS Gatekeeping</span>
+                        <span class="skill-chip">Threat Playbooks</span>
+                        <span class="skill-chip">SHA-256 Blockchain</span>
+                    </div>
                 </div>
 
-                <div class="skill-category">
-                    <h4>Machine Learning & NLP</h4>
-                    <ul>
-                        <li>PyTorch & Transformers</li>
-                        <li>DistilBERT & Mistral 7B</li>
-                        <li>Isolation Forest Anomaly Detection</li>
-                        <li>SMOTE Imbalanced Learning</li>
-                        <li>SHAP Explainable AI</li>
-                        <li>Scikit-Learn Pipeline Design</li>
-                    </ul>
+                <div class="skill-category-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">🧠</span>
+                        <h4>Machine Learning & NLP</h4>
+                    </div>
+                    <div class="chip-container">
+                        <span class="skill-chip">PyTorch & Transformers</span>
+                        <span class="skill-chip">DistilBERT / SecBERT</span>
+                        <span class="skill-chip">Mistral 7B</span>
+                        <span class="skill-chip">Isolation Forest</span>
+                        <span class="skill-chip">SMOTE Imbalanced Learning</span>
+                        <span class="skill-chip">SHAP Explainable AI</span>
+                    </div>
                 </div>
 
-                <div class="skill-category">
-                    <h4>Backend & Cloud Engineering</h4>
-                    <ul>
-                        <li>Python (3.10 / 3.11)</li>
-                        <li>FastAPI & Async Uvicorn</li>
-                        <li>RESTful API Architecture</li>
-                        <li>Docker & Docker Compose</li>
-                        <li>SQLite & Database Design</li>
-                        <li>Vercel & Render Deployment</li>
-                    </ul>
+                <div class="skill-category-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">⚙️</span>
+                        <h4>Backend & Cloud Systems</h4>
+                    </div>
+                    <div class="chip-container">
+                        <span class="skill-chip">Python 3.10 / 3.11</span>
+                        <span class="skill-chip">FastAPI & Async Uvicorn</span>
+                        <span class="skill-chip">Docker & Docker Compose</span>
+                        <span class="skill-chip">RESTful Microservices</span>
+                        <span class="skill-chip">SQLite & SQL</span>
+                        <span class="skill-chip">Vercel & Render</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer / Contact -->
+    <!-- Contact & Footer -->
     <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <h2>Let's Connect & Collaborate</h2>
-                <p>Interested in AI security evaluation, threat intelligence research, or open-source software collaboration?</p>
+        <div class="container footer-container">
+            <div class="footer-cta-card">
+                <span class="section-badge">Let's Build Something Impactful</span>
+                <h2 class="footer-heading">Connect with Aikagra Gupta</h2>
+                <p class="footer-desc">
+                    Open to collaborations in AI Security Research, LLM Red-Teaming, Threat Intelligence, and Full-Stack Engineering.
+                </p>
                 <div class="footer-actions">
-                    <a href="https://github.com/Aikagra-rgb" target="_blank" rel="noopener" class="btn btn-primary">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                        Follow on GitHub
+                    <a href="https://github.com/Aikagra-rgb" target="_blank" rel="noopener" class="btn btn-glow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span>GitHub Profile (@Aikagra-rgb)</span>
                     </a>
                 </div>
-                <div class="footer-bottom">
-                    <p>© 2026 Aikagra Gupta. Built with HTML5/CSS3. Deployable on Vercel & Render.</p>
-                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Aikagra Gupta. Hosted on Vercel & Render.</p>
+                <div class="footer-tech-note">Designed with Modern Glassmorphism & High-Performance Web Standards</div>
             </div>
         </div>
     </footer>
