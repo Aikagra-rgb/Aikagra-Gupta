@@ -16,6 +16,14 @@
 
 ---
 
+## 📑 Publications
+
+- **CyberGuard AI: A Multi-Task Dual-Head SecBERT Architecture for Automated CVE Severity Triage and Threat Intelligence Generation**  
+  *Aikagra Gupta* — Published in *International Research Journal of Engineering and Technology (IRJET)*, Vol. 13, Issue 10, Oct 2026.  
+  [📄 Read Paper (PDF)](https://www.irjet.net/archives/V13/i10/IRJET-V13I1005.pdf) • [💻 Code Repository](https://github.com/Aikagra-rgb/cve-severity-classifier) • [🌐 Live Platform](https://cve-severity-classifier-2sbnqjlnckufq9x5aufdtv.streamlit.app/)
+
+---
+
 ## Hosting & Deployment
 
 This project is built using zero-dependency static Web standards (HTML5, CSS3, ES6 JavaScript) and can be hosted for **free** on Vercel, Render, or GitHub Pages.
