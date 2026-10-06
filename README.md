@@ -10,7 +10,7 @@
 ## Technical Domains Highlighted
 
 - **🛡️ AI & LLM Security:** `guardrail-eval` (Red-teaming, prompt injection fuzzing, hallucination rate scoring).
-- **🔍 Cybersecurity & Threat Intel:** `cve-severity-classifier` (DistilBERT + Mistral 7B), `Cerberus` (Multi-agent SOC, MITRE ATT&CK RAG, Three.js 3D UI), `Orion-Hybrid-IDS`, `Wireshark_PacketCapture`.
+- **🔍 Cybersecurity & Threat Intel:** `cve-severity-classifier` (Published IRJET Oct 2026 — Dual-Head SecBERT + Mistral 7B), `Cerberus` (Multi-agent SOC, MITRE ATT&CK RAG, Three.js 3D UI), `Orion-Hybrid-IDS`, `Wireshark_PacketCapture`.
 - **🧬 Full-Stack & Applied AI:** `longevity-lens` (Gemini 3.6-flash, 3072-dim RAG, Levine PhenoAge), `SHIELD-tourist-safety-system` (Isolation Forest, Blockchain ledger).
 - **📊 Machine Learning & Analytics:** `Customer-Churn-Prediction` (SMOTE, SHAP, XGBoost).
 
