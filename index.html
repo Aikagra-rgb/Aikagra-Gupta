@@ -20,6 +20,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#domains">Domains</a></li>
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact" class="btn-primary-nav">Contact</a></li>
@@ -123,8 +124,42 @@
         </div>
     </section>
 
+    <!-- Publications Section -->
+    <section id="publications" class="section bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Research & Academia</span>
+                <h2>Publications</h2>
+                <p>Peer-reviewed research articles and scientific publications.</p>
+            </div>
+
+            <div class="publication-card" style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 2rem; border-radius: 16px;">
+                <div class="pub-badge" style="display: inline-block; padding: 0.3rem 0.8rem; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 9999px; font-size: 0.8rem; font-family: var(--font-mono); color: #a5b4fc; margin-bottom: 1rem;">
+                    📄 IRJET Vol. 13, Issue 10 • Oct 2026
+                </div>
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: var(--text-primary); line-height: 1.3;">
+                    CyberGuard AI: A Multi-Task Dual-Head SecBERT Architecture for Automated CVE Severity Triage and Threat Intelligence Generation
+                </h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
+                    <strong>Aikagra Gupta</strong> — Published in <em>International Research Journal of Engineering and Technology (IRJET)</em>, Vol. 13, Issue 10, Oct 2026.
+                </p>
+                <div class="pub-links" style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                    <a href="https://www.irjet.net/archives/V13/i10/IRJET-V13I1005.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.5rem 1rem;">
+                        📄 Read Paper (PDF)
+                    </a>
+                    <a href="https://github.com/Aikagra-rgb/cve-severity-classifier" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.875rem; padding: 0.5rem 1rem;">
+                        💻 Code Repository
+                    </a>
+                    <a href="https://cve-severity-classifier-2sbnqjlnckufq9x5aufdtv.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 0.875rem; padding: 0.5rem 1rem;">
+                        🌐 Live Platform
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section with Filter Tabs -->
-    <section id="projects" class="section bg-alt">
+    <section id="projects" class="section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Portfolio</span>
@@ -185,9 +220,14 @@
                 <article class="project-card" data-category="cybersecurity">
                     <div class="project-header">
                         <div class="project-type">Cybersecurity / NLP</div>
-                        <a href="https://github.com/Aikagra-rgb/cve-severity-classifier" target="_blank" rel="noopener" class="project-link-icon" title="View Source">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        </a>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <a href="https://cve-severity-classifier-2sbnqjlnckufq9x5aufdtv.streamlit.app/" target="_blank" rel="noopener" class="project-link-icon" title="Live Streamlit App">
+                                🌐
+                            </a>
+                            <a href="https://github.com/Aikagra-rgb/cve-severity-classifier" target="_blank" rel="noopener" class="project-link-icon" title="View Source">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
                     </div>
                     <h3>cve-severity-classifier</h3>
                     <p>AI-powered CVE severity classifier using fine-tuned DistilBERT for CVSS scoring and a local Mistral 7B LLM agent for threat mitigation playbook generation.</p>
