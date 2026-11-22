@@ -949,6 +949,61 @@ body {
     box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
 }
 
+/* Featured project card (spans full width) */
+.project-card.featured {
+    grid-column: 1 / -1;
+    border-color: rgba(99, 102, 241, 0.55);
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.12) 0%, rgba(17, 24, 39, 0.88) 60%);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(99, 102, 241, 0.15);
+}
+
+.project-card.featured .card-title {
+    font-size: 1.85rem;
+}
+
+.featured-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.85rem;
+}
+
+.fm-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 1rem 1.15rem;
+}
+
+.fm-val {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent-cyan);
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.fm-label {
+    display: block;
+    font-size: 0.825rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+    .featured-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .featured-metrics {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ==========================================================================
    TECHNICAL ARSENAL / SKILLS BENTO
    ========================================================================== */
